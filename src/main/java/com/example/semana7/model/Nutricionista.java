@@ -2,6 +2,9 @@ package com.example.semana7.model;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 public class Nutricionista {
     @Id
@@ -11,6 +14,17 @@ public class Nutricionista {
     private Long endereco_id;
     private String crn;
     private String especialidade;
+
+    @ElementCollection
+    private Set<String> certificacoes = new HashSet<>();
+
+    public Set<String> getCertificacoes() {
+        return certificacoes;
+    }
+
+    public void setCertificacoes(Set<String> certificacoes) {
+        this.certificacoes = certificacoes;
+    }
 
     public Long getNutricionista_id() {
         return nutricionista_id;

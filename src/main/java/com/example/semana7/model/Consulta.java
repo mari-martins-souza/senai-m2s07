@@ -2,6 +2,7 @@ package com.example.semana7.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -53,4 +54,33 @@ public class Consulta {
     private Long paciente_id;
     private Date data_da_consulta;
     private String observacoes;
+
+    public String getNomeNutricionista() {
+        return nomeNutricionista;
+    }
+
+    public void setNomeNutricionista(String nomeNutricionista) {
+        this.nomeNutricionista = nomeNutricionista;
+    }
+
+    public String getNomePaciente() {
+        return nomePaciente;
+    }
+
+    public void setNomePaciente(String nomePaciente) {
+        this.nomePaciente = nomePaciente;
+    }
+
+    private String nomeNutricionista;
+    private String nomePaciente;
+
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
+
+    private LocalDateTime dataHora;
 }

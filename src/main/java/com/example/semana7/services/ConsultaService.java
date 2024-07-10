@@ -5,6 +5,8 @@ import com.example.semana7.repository.ConsultaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ConsultaService {
     @Autowired
@@ -25,4 +27,9 @@ public class ConsultaService {
     public Consulta findById(Long id) {
         return consultaRepository.findById(id).orElse(null);
     }
+
+    public List<Consulta> listConsultas() {
+        return consultaRepository.findAll();
+    }
+
 }
