@@ -9,6 +9,7 @@ import java.util.Set;
 public class Nutricionista {
     @Id
     private Long nutricionista_id;
+    private String nome;
     private String matricula;
     private Integer tempo_de_experiencia;
     private Long endereco_id;
@@ -24,6 +25,14 @@ public class Nutricionista {
 
     public void setCertificacoes(Set<String> certificacoes) {
         this.certificacoes = certificacoes;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Long getNutricionista_id() {
